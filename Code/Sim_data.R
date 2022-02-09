@@ -74,7 +74,7 @@ s1=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s1
-#ggsave('sim_xy.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_xy.pdf',device='pdf',width=4.5,height=2.5)
 
 s2=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
           mapping=aes(x=c,y=y))+geom_point(colour=col.pal.green)+
@@ -89,7 +89,7 @@ s2=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s2
-#ggsave('sim_v1y.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_v1y.pdf',device='pdf',width=4.5,height=2.5)
 
 s3=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,3],p=sim$pi),
           mapping=aes(x=c,y=y))+geom_point(colour=col.pal.green)+
@@ -104,7 +104,7 @@ s3=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,3],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s3
-#ggsave('sim_v3y.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_v3y.pdf',device='pdf',width=4.5,height=2.5)
 
 s4=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
           mapping=aes(x=x,y=z))+geom_point(colour=col.pal.green)+
@@ -119,7 +119,7 @@ s4=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s4
-#ggsave('sim_xz.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_xz.pdf',device='pdf',width=4.5,height=2.5)
 
 s5=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
           mapping=aes(x=c,y=z))+geom_point(colour=col.pal.green)+
@@ -134,7 +134,7 @@ s5=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,1],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s5
-#ggsave('sim_v1z.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_v1z.pdf',device='pdf',width=4.5,height=2.5)
 
 s6=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,3],p=sim$pi),
           mapping=aes(x=c,y=z))+geom_point(colour=col.pal.green)+
@@ -149,5 +149,5 @@ s6=ggplot(data=data.frame(x=sim$x,y=sim$y,z=sim$z,c=sim$v[,3],p=sim$pi),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )
 s6
-#ggsave('sim_v3z.pdf',device='pdf',width=4.5,height=2.5)
+ggsave('sim_v3z.pdf',device='pdf',width=4.5,height=2.5)
 

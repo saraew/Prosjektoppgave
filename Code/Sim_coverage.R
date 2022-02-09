@@ -264,7 +264,7 @@ ggplot(filter(mcmc.data,z==1))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_mcmc_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_mcmc_corr1.pdf',device='pdf',width=4.5,height=3)
 
 # Coverage plot when correlation is 1.
 ggplot(filter(inlabru.data,z==1))+
@@ -283,7 +283,7 @@ ggplot(filter(inlabru.data,z==1))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_inla_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_inla_corr1.pdf',device='pdf',width=4.5,height=3)
 
 # Lambda error plot when correlation is 1. 
 ggplot(filter(mcmc.data,z==1))+
@@ -302,7 +302,7 @@ ggplot(filter(mcmc.data,z==1))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_mcmc_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_mcmc_corr1.pdf',device='pdf',width=4.5,height=3)
 
 ggplot(filter(inlabru.data,z==1))+
   geom_tile(aes(x=x,y=y,fill=round(l,2)))+
@@ -320,7 +320,7 @@ ggplot(filter(inlabru.data,z==1))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_inla_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_inla_corr1.pdf',device='pdf',width=4.5,height=3)
 
 #####################################################################################
 # Generating  plots for v_{s,3}, with correlation 0.6 to w_s. 
@@ -343,7 +343,7 @@ ggplot(filter(mcmc.data,z==3))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_mcmc_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_mcmc_corr06.pdf',device='pdf',width=4.5,height=3)
 
 ggplot(filter(inlabru.data,z==3))+
   geom_tile(aes(x=x,y=y,fill=c))+
@@ -361,7 +361,7 @@ ggplot(filter(inlabru.data,z==3))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_inla_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_inla_corr06.pdf',device='pdf',width=4.5,height=3)
 
 # Lambda error plot when correlation is 0.6. 
 ggplot(filter(mcmc.data,z==3))+
@@ -380,7 +380,7 @@ ggplot(filter(mcmc.data,z==3))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_mcmc_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_mcmc_corr06.pdf',device='pdf',width=4.5,height=3)
 
 ggplot(filter(inlabru.data,z==3))+
   geom_tile(aes(x=x,y=y,fill=round(l,2)))+
@@ -398,7 +398,7 @@ ggplot(filter(inlabru.data,z==3))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_inla_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_inla_corr06.pdf',device='pdf',width=4.5,height=3)
 
 
 #####################################################################################
@@ -422,7 +422,7 @@ ggplot(filter(mcmc.data,z==4))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_mcmc_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_mcmc_corr04.pdf',device='pdf',width=4.5,height=3)
 
 ggplot(filter(inlabru.data,z==4))+
   geom_tile(aes(x=x,y=y,fill=c))+
@@ -440,7 +440,7 @@ ggplot(filter(inlabru.data,z==4))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_coverage_inla_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_coverage_inla_corr04.pdf',device='pdf',width=4.5,height=3)
 
 # Lambda error plot when correlation is 0.4. 
 ggplot(filter(mcmc.data,z==4))+
@@ -459,7 +459,7 @@ ggplot(filter(mcmc.data,z==4))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_mcmc_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_mcmc_corr04.pdf',device='pdf',width=4.5,height=3)
 
 ggplot(filter(inlabru.data,z==4))+
   geom_tile(aes(x=x,y=y,fill=round(l,2)))+
@@ -477,4 +477,4 @@ ggplot(filter(inlabru.data,z==4))+
     plot.title = element_text(size= 14, hjust=0.01, color = "#4e4d47", margin = margin(b = 0.1, t = 0.4, l = 2, unit = "cm"))
   )+guides(colour="none",fill="none")+
   scale_fill_distiller(palette = col.pal) +scale_colour_gradientn(colours = c(col.pal.green, col.pal.seagreen, col.pal.blue, col.pal.violet))
-#ggsave('sim_lambda_error_inla_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('sim_lambda_error_inla_corr04.pdf',device='pdf',width=4.5,height=3)

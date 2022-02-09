@@ -202,7 +202,7 @@ a0.1=ggplot(data=data.frame(a0_mcmc=as.numeric(sim.mcmc.list[[index]][,1]),
   )+scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1)
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))
 a0.1
-#ggsave('mcmc_inla_a0_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a0_corr1.pdf',device='pdf',width=4.5,height=3)
 
 a1.1=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
                               x=seq(0.5,2,length=1000),prior=dnorm(seq(0.25,1.75,length=1000),0,10)))+
@@ -227,7 +227,7 @@ a1.1=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
   )+guides(shape = NA,colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 a1.1
-#ggsave('mcmc_inla_a1_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a1_corr1.pdf',device='pdf',width=4.5,height=3)
 
 b0.1=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
                               x=seq(-1.7,3,length=1000),
@@ -253,7 +253,7 @@ b0.1=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 b0.1
-#ggsave('mcmc_inla_b0_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b0_corr1.pdf',device='pdf',width=4.5,height=3)
 
 b1.1=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
                               x=seq(-0.5,4,length=1000),
@@ -279,7 +279,7 @@ b1.1=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 b1.1
-#ggsave('mcmc_inla_b1_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b1_corr1.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.pi.plot.1=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,1],index.return=TRUE)$ix],x=sort(sim$v[,1]),
@@ -300,7 +300,7 @@ mcmc.pi.plot.1=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,1],index.return=T
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_y_continuous(limits = c(0,1))
 mcmc.pi.plot.1
-#ggsave('mcmc_pi_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pi_corr1.pdf',device='pdf',width=4.5,height=3)
 
 inla.pi.plot.1=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,1],index.return=TRUE)$ix],x=sort(sim$v[,1]),
                                  l=rowQuantiles(inla.pi.sorted.1, rows = NULL, cols = NULL, probs = 0.025),
@@ -320,7 +320,7 @@ inla.pi.plot.1=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,1],index.return=T
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_y_continuous(limits = c(0,1))
 inla.pi.plot.1
-#ggsave('inla_pi_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pi_corr1.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.phi.plot.1=ggplot(data=data.frame(x=sim$phi,y=apply(phi.1,2,mean)))+
@@ -337,7 +337,7 @@ mcmc.phi.plot.1=ggplot(data=data.frame(x=sim$phi,y=apply(phi.1,2,mean)))+
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 mcmc.phi.plot.1
-#ggsave('mcmc_phi_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_phi_corr1.pdf',device='pdf',width=4.5,height=3)
 
 inla.phi.plot.1 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.1$summary.random$spatial$mean))+
   geom_abline(slope=1,intercept=0,colour="#22211d")+
@@ -353,7 +353,7 @@ inla.phi.plot.1 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.1$summary.random$sp
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 inla.phi.plot.1
-#ggsave('inla_phi_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_phi_corr1.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.y.plot.1=ggplot(data.frame(x=sim$y,
@@ -374,7 +374,7 @@ mcmc.y.plot.1=ggplot(data.frame(x=sim$y,
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+ scale_y_continuous(limits = c(0,400)) +scale_x_continuous(limits = c(0,300))
 mcmc.y.plot.1
-#ggsave('mcmc_pred_y_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pred_y_corr1.pdf',device='pdf',width=4.5,height=3)
 
 
 inla.y.plot.1 = ggplot(data.frame(x=sim$y,
@@ -395,7 +395,7 @@ inla.y.plot.1 = ggplot(data.frame(x=sim$y,
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+ scale_y_continuous(limits = c(0,400))  +scale_x_continuous(limits = c(0,300))
 inla.y.plot.1
-#ggsave('inla_pred_y_corr1.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pred_y_corr1.pdf',device='pdf',width=4.5,height=3)
 
 
 
@@ -441,7 +441,7 @@ a0.06=ggplot(data=data.frame(a0_mcmc=as.numeric(sim.mcmc.list[[index]][,1]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 a0.06
-#ggsave('mcmc_inla_a0_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a0_corr06.pdf',device='pdf',width=4.5,height=3)
 
 a1.06=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
                               x=seq(0.5,2,length=1000),prior=dnorm(seq(0.25,1.75,length=1000),0,10)))+
@@ -466,7 +466,7 @@ a1.06=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 a1.06
-#ggsave('mcmc_inla_a1_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a1_corr06.pdf',device='pdf',width=4.5,height=3)
 
 b0.06=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
                               x=seq(-1.7,3,length=1000),
@@ -492,7 +492,7 @@ b0.06=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2,"True Value" = 1))
 b0.06
-#ggsave('mcmc_inla_b0_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b0_corr06.pdf',device='pdf',width=4.5,height=3)
 
 b1.06=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
                               x=seq(-0.5,4,length=1000),
@@ -518,7 +518,7 @@ b1.06=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 b1.06
-#ggsave('mcmc_inla_b1_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b1_corr06.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.pi.plot.06=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,3],index.return=TRUE)$ix],x=sort(sim$v[,3]),
@@ -539,7 +539,7 @@ mcmc.pi.plot.06=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,3],index.return=
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.35,1.35))+scale_y_continuous(limits = c(0,1))
 mcmc.pi.plot.06
-#ggsave('mcmc_pi_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pi_corr06.pdf',device='pdf',width=4.5,height=3)
 
 inla.pi.plot.06=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,3],index.return=TRUE)$ix],x=sort(sim$v[,3]),
                                       l=rowQuantiles(inla.pi.sorted.06, rows = NULL, cols = NULL, probs = 0.025),
@@ -559,7 +559,7 @@ inla.pi.plot.06=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,3],index.return=
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.35,1.35))+scale_y_continuous(limits = c(0,1))
 inla.pi.plot.06
-#ggsave('inla_pi_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pi_corr06.pdf',device='pdf',width=4.5,height=3)
 
 mcmc.phi.plot.06=ggplot(data=data.frame(x=sim$phi,y=apply(phi.06,2,mean)))+
   geom_abline(slope=1,intercept=0,colour="#22211d")+
@@ -575,7 +575,7 @@ mcmc.phi.plot.06=ggplot(data=data.frame(x=sim$phi,y=apply(phi.06,2,mean)))+
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 mcmc.phi.plot.06
-#ggsave('mcmc_phi_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_phi_corr06.pdf',device='pdf',width=4.5,height=3)
 
 inla.phi.plot.06 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.06$summary.random$spatial$mean))+
   geom_abline(slope=1,intercept=0,colour="#22211d")+
@@ -591,7 +591,7 @@ inla.phi.plot.06 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.06$summary.random$
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 inla.phi.plot.06
-#ggsave('inla_phi_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_phi_corr06.pdf',device='pdf',width=4.5,height=3)
 
 mcmc.y.plot.06=ggplot(data.frame(x=sim$y,l=apply(y.06,2,quantile,0.025),u=apply(y.06,2,quantile,0.975),
                          m=apply(y.06,2,mean)))+geom_abline(slope=1,intercept=0,colour="#22211d")+
@@ -609,7 +609,7 @@ mcmc.y.plot.06=ggplot(data.frame(x=sim$y,l=apply(y.06,2,quantile,0.025),u=apply(
   )+
   scale_y_continuous(limits = c(0,400)) + scale_x_continuous(limits = c(0,300))
 mcmc.y.plot.06
-#ggsave('mcmc_pred_y_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pred_y_corr06.pdf',device='pdf',width=4.5,height=3)
 
 inla.y.plot.06 = ggplot(data.frame(x=sim$y,
                                   l=rowQuantiles(inla.y.06, rows = NULL, cols = NULL, probs = 0.025),
@@ -629,7 +629,7 @@ inla.y.plot.06 = ggplot(data.frame(x=sim$y,
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+ scale_y_continuous(limits = c(0,400))  +scale_x_continuous(limits = c(0,300))
 inla.y.plot.06
-#ggsave('inla_pred_y_corr06.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pred_y_corr06.pdf',device='pdf',width=4.5,height=3)
 
 
 ##################################################################################
@@ -674,7 +674,7 @@ a0.04=ggplot(data=data.frame(a0_mcmc=as.numeric(sim.mcmc.list[[index]][,1]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 a0.04
-#ggsave('mcmc_inla_a0_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a0_corr04.pdf',device='pdf',width=4.5,height=3)
 
 a1.04=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
                               x=seq(0.5,2,length=1000),prior=dnorm(seq(0.25,1.75,length=1000),0,10)))+
@@ -699,7 +699,7 @@ a1.04=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 a1.04
-#ggsave('mcmc_inla_a1_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_a1_corr04.pdf',device='pdf',width=4.5,height=3)
 
 b0.04=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
                               x=seq(-1.7,3,length=1000),
@@ -725,7 +725,7 @@ b0.04=ggplot(data=data.frame(b0_mcmc=as.numeric(sim.mcmc.list[[index]][,3]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 b0.04
-#ggsave('mcmc_inla_b0_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b0_corr04.pdf',device='pdf',width=4.5,height=3)
 
 b1.04=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
                               x=seq(-0.5,4,length=1000),
@@ -751,7 +751,7 @@ b1.04=ggplot(data=data.frame(b1_mcmc=as.numeric(sim.mcmc.list[[index]][,4]),
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
 b1.04
-#ggsave('mcmc_inla_b1_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_inla_b1_corr04.pdf',device='pdf',width=4.5,height=3)
 
 
 
@@ -773,7 +773,7 @@ mcmc.pi.plot.04=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,4],index.return=
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_y_continuous(limits = c(0,1))+scale_x_continuous(limits = c(-1.35,1.35))
 mcmc.pi.plot.04
-#ggsave('mcmc_pi_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pi_corr04.pdf',device='pdf',width=4.5,height=3)
 
 inla.pi.plot.04=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,4],index.return=TRUE)$ix],x=sort(sim$v[,4]),
                                        l=rowQuantiles(inla.pi.sorted.04, rows = NULL, cols = NULL, probs = 0.025),
@@ -793,7 +793,7 @@ inla.pi.plot.04=ggplot(data=data.frame(p=sim$pi[sort.int(sim$v[,4],index.return=
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_y_continuous(limits = c(0,1))
 inla.pi.plot.04
-#ggsave('inla_pi_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pi_corr04.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.phi.plot.04=ggplot(data=data.frame(x=sim$phi,y=apply(phi.04,2,mean)))+
@@ -810,7 +810,7 @@ mcmc.phi.plot.04=ggplot(data=data.frame(x=sim$phi,y=apply(phi.04,2,mean)))+
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 mcmc.phi.plot.04
-#ggsave('mcmc_phi_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_phi_corr04.pdf',device='pdf',width=4.5,height=3)
 
 inla.phi.plot.04 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.04$summary.random$spatial$mean))+
   geom_abline(slope=1,intercept=0,colour="#22211d")+
@@ -826,7 +826,7 @@ inla.phi.plot.04 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.04$summary.random$
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 inla.phi.plot.04
-#ggsave('inla_phi_corr4.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_phi_corr4.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.y.plot.04=ggplot(data.frame(x=sim$y,l=apply(y.04,2,quantile,0.025),u=apply(y.04,2,quantile,0.975),
@@ -844,7 +844,7 @@ mcmc.y.plot.04=ggplot(data.frame(x=sim$y,l=apply(y.04,2,quantile,0.025),u=apply(
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+ scale_y_continuous(limits = c(0,400)) +scale_x_continuous(limits = c(0,300))
 mcmc.y.plot.04
-#ggsave('mcmc_pred_y_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('mcmc_pred_y_corr04.pdf',device='pdf',width=4.5,height=3)
 
 
 inla.y.plot.04 = ggplot(data.frame(x=sim$y,
@@ -865,5 +865,5 @@ inla.y.plot.04 = ggplot(data.frame(x=sim$y,
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+ scale_y_continuous(limits = c(0,400))  +scale_x_continuous(limits = c(0,300))
 inla.y.plot.04
-#ggsave('inla_pred_y_corr04.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_pred_y_corr04.pdf',device='pdf',width=4.5,height=3)
 
