@@ -233,7 +233,7 @@ run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
 
 print("Running the sensitivity analysis using INLA (inlabru) for the three examples used in the specialisation project)")
 
-inlabru.coverage.sim <-run.inlabru.coverage(prior.means,prior.sd, v.index)
+inlabru.coverage.sim <-run.inlabru.coverage(prior.means,prior.sd, v.index, dump = TRUE)
 
 
 inlabru.data <- data.frame(x=prior.means,y=prior.sd,z=v.index,cov=cor(sim$v)[v.index],
