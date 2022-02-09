@@ -5,6 +5,24 @@
 
 set.seed(seed)
 
+# Storing the value for simulated phi here. This makes the simulation-code possible to run without loading in the Data-file, where Stoner
+# Has stored the simulated phi, as it changes values depending on computer used to calculate ut, because of the eigen()-function. 
+# Using the same simulated phi as in the paper by Stoner et al. 
+simulated_phi <- c(0.2844821276, -0.0363941265, -0.0707305993, 0.0427993385, -0.0017689272, 0.0008966238, 0.5634107744,
+          0.2764364953, -0.8024495523,  -0.8561177709, 0.5271112148, 0.3809533570, -0.1819777796, 0.2477208992, -0.1182326767,
+          -0.1516608025, 0.2040801653, -0.2160254748, -0.8508768879, -0.8204159336, 0.5689268672, 0.3076277727, -0.3250235462,
+          -0.5634853700, -0.4016911559,-0.7568827615, -0.3636256845, -0.8918397721, -0.7434928724, -0.3197348102,  0.6355634230,
+          0.3739016964, 0.2692871375, -0.0825380532, -0.5627878853, -0.1719729603,-0.7043588282, -0.9596770810, -1.4120089445,
+          -0.3691143419,  0.5539610822, 0.7728624530, 0.9414071883,  0.4371045211, -0.3517693934, -0.1157574608, -0.4380227330, 
+          -0.8139820155, -0.8439393041, -0.3245777684,  0.4809039258, 0.5230876870,0.9001388411, 0.3650667645, 0.1361678012,
+          0.0078659201, -0.4247900319, -0.5862446291, -0.1379619510, -0.6258588073, 0.5512059103, 0.5166236169,  0.4088752449,
+          0.2283988913, 0.5150460738,  0.2408916793, 0.0893253367, -0.2754093517, 0.3040021363, -0.6754143825, 0.7185599346,
+          0.0475291408,  0.1564015858,  0.2246614043, 0.5712582000, 0.1825522324, 0.2022921257, 0.5200029705, 0.3655308218,
+          -0.1764287029,-0.0054663672,-0.0511434216, 0.0202323774,  0.7017659297, 0.8503653324, 0.3515035738, 0.1504637600,
+          -0.2613447203,0.0146129158,-0.0431936051,-0.0684673858, 0.2725965583, 0.1471866894, 0.0136802858, 0.1200327661,
+          0.2336880557,0.3809539810,0.0139818627,-0.1939428604, 0.2326140199)
+
+
 sim=list()
 sim$N=100 # Number of observations.
 
@@ -20,8 +38,8 @@ tau=4 # Spatial effect precision parameter.
 # which we found produced numerically different results
 # on different machines, so to reproduce the plots in the
 # paper we include our simulated phi.
-sim$phi <- ricar_simple(tau*(sim$D-sim$A)) 
-sim$phi <- simulated_phi # Overwrite. From Stoner et al. which crated this simulated_phi. 
+#sim$phi <- ricar_simple(tau*(sim$D-sim$A)) 
+sim$phi <- simulated_phi #From Stoner et al. which crated this simulated_phi. 
 
 # True covariates.
 sim$x=runif(sim$N,-1,1)

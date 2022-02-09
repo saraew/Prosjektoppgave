@@ -826,7 +826,7 @@ inla.phi.plot.04 =ggplot(data=data.frame(x=sim$phi,y=inla.fit.04$summary.random$
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   )+scale_x_continuous(limits = c(-1.5,1))+scale_y_continuous(limits = c(-1.5,1.5))
 inla.phi.plot.04
-ggsave('inla_phi_corr4.pdf',device='pdf',width=4.5,height=3)
+ggsave('inla_phi_corr04.pdf',device='pdf',width=4.5,height=3)
 
 
 mcmc.y.plot.04=ggplot(data.frame(x=sim$y,l=apply(y.04,2,quantile,0.025),u=apply(y.04,2,quantile,0.975),
