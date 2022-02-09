@@ -18,7 +18,7 @@
 
 
 # Needed if running on Markov
-Markov = FALSE
+Markov = TRUE
 if(Markov == TRUE){
   .libPaths("~/Documents/Prosjektoppgave/R_packages")
 } else {
