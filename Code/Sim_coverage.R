@@ -118,7 +118,7 @@ mcmc.data=data.frame(x=prior.means,y=prior.sd,z=v.index,cov=cor(sim$v)[v.index],
 run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
   #Dump into file
   if(dump){
-    sink(file = "inlabru_output_2_corr1.txt")
+    sink(file = "inlabru_output.txt")
     sink(stdout(),type="message")
     sink(stdout(),type= "output")
   }
