@@ -595,8 +595,8 @@ ggsave('inla_phi_corr06.pdf',device='pdf',width=4.5,height=3)
 
 mcmc.y.plot.06=ggplot(data.frame(x=sim$y,l=apply(y.06,2,quantile,0.025),u=apply(y.06,2,quantile,0.975),
                          m=apply(y.06,2,mean)))+geom_abline(slope=1,intercept=0,colour="#22211d")+
-  geom_point(mapping=aes(x=x,y=l),colour=col.pal.green)+
-  geom_point(mapping=aes(x=x,y=u),colour=col.pal.blue)+
+  geom_point(mapping=aes(x=x,y=l),colour=col.pal.blue)+
+  geom_point(mapping=aes(x=x,y=u),colour=col.pal.green)+
   labs(
     y=expression('Predicted Count ('*y[s]*')'),
     x=expression('True Count ('*y[s]*')')
@@ -669,7 +669,7 @@ a0.04=ggplot(data=data.frame(a0_mcmc=as.numeric(sim.mcmc.list[[index]][,1]),
     legend.background = element_rect(fill = "#f5f5f2", color = NA),
     legend.position = "bottom"
   )+geom_vline(aes(xintercept = a0,colour="True Value"), show.legend = F
-  )+scale_x_continuous(limits = c(2.5,5))+scale_y_continuous(limits = c(0,2)
+  )+scale_x_continuous(limits = c(2.5,5))+scale_y_continuous(limits = c(0,3)
   )+scale_color_manual(" " ,limits=c("MCMC", "inlabru", "Prior", "True Value"), values = c(col.pal.red,col.pal.blue, "black", col.pal.green)
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
@@ -677,7 +677,7 @@ a0.04
 ggsave('mcmc_inla_a0_corr04.pdf',device='pdf',width=4.5,height=3)
 
 a1.04=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
-                              x=seq(0.5,2,length=1000),prior=dnorm(seq(0.25,1.75,length=1000),0,10)))+
+                              x=seq(0,2,length=1000),prior=dnorm(seq(0.25,1.75,length=1000),0,10)))+
   geom_line(aes(x=x,y=prior,colour="Prior", linetype = "Prior"))+
   #stat_density(mapping=aes(x=a1),adjust=3,fill=col.pal.red,alpha=0.4, colour = "black")+
   geom_density(mapping=aes(x=a1_mcmc, colour = "MCMC"), adjust = 3, fill=NA, alpha=0.4, size = 0.6)+
@@ -694,7 +694,7 @@ a1.04=ggplot(data=data.frame(a1_mcmc=as.numeric(sim.mcmc.list[[index]][,2]),
     legend.background = element_rect(fill = "#f5f5f2", color = NA),
     legend.position = "bottom"
   )+geom_vline(aes(xintercept = a1,colour="True Value"), show.legend = F
-  )+scale_x_continuous(limits = c(0.5,2))+scale_y_continuous(limits = c(0,4)
+  )+scale_x_continuous(limits = c(0,2))+scale_y_continuous(limits = c(0,4)
   )+scale_color_manual(" " ,limits=c("MCMC", "inlabru", "Prior", "True Value"), values = c(col.pal.red,col.pal.blue, "black", col.pal.green)
   )+guides(colour = guide_legend(override.aes = list( values =c(col.pal.red,col.pal.blue, "black", col.pal.green))))+
   scale_linetype_manual(" ",values=c("MCMC"=1,"inlabru"=1, "Prior" = 2, "True Value" = 1))
