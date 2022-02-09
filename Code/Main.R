@@ -100,9 +100,14 @@ load("Data.RData")
 #Creating the synthetic data
 source("Sim_data.R")
 
+# Running the sensistivity analysis and 
+# plotting the coverage using MCMC and inlabru, 
+# with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
+source("Sim_coverage.R")
+
 # Running the simulation experiment and plotting the results.
 # Using both inlabru and MCMC to run the experiments. 
-source("Sim_mcmc_inlabru.R")
+source("Sim_experiments.R")
 
 
 

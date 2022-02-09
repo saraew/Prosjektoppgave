@@ -4,6 +4,14 @@
 ##################################################
 
 
+prior.means=b0+rep(0.6,3) # The mean of the prior for beta_0.
+prior.sd=rep(0.6,3) # The standard deviation of the prior for beta_0.
+v.index= c(1,3,4) # The strength of the under-reporting covariate.
+
+##################################################
+# Setting up and running MCMC
+##################################################
+
 start_time_mcmc <- Sys.time()
 
 sim.code.mcmc=nimbleCode({
@@ -20,12 +28,6 @@ sim.code.mcmc=nimbleCode({
   tau ~ dgamma(1, 0.00005)
   #epsilon ~ T(dnorm(0,sd=1),0,) #REMOVE THIS, NOT USED IN MODEL
 }) 
-
-prior.means=b0+rep(0.6,3) # The mean of the prior for beta_0.
-prior.sd=rep(0.6,3) # The standard deviation of the prior for beta_0.
-v.index= c(1,3,4) # The strength of the under-reporting covariate.
-
-
 
 
 # Setup NIMBLE.
@@ -64,7 +66,9 @@ for(i in c(1:3)){
 end_time_mcmc <- Sys.time()
 print(c("Time taken to run three iterations of the MCMC algorithm:", difftime(end_time_mcmc,  start_time_mcmc, units = "secs")))
 
-#Setting up the running of inlabru
+##################################################
+# Setting up and running inlabru
+##################################################
 
 run_inlabru <- function(means, sd, v.index){
   sim.inla.list <- list()
