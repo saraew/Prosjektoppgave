@@ -52,7 +52,7 @@ sim.compiled.mcmc<-compileNimble(sim.mcmc, project = sim.model,resetFunctions = 
 print("Running MCMC and calculating the coverage when changing the prior distribution on beta for the three examples used in the specialisation project)")
 
 sim.mcmc.list=list()
-for(i in c(1:21)){#(length(v.index)))){
+for(i in c(1:(length(v.index)))){
   print(i)
   sim.compiled.model$prior_mean=prior.means[i]
   sim.compiled.model$prior_sd=prior.sd[i]
@@ -65,7 +65,9 @@ for(i in c(1:21)){#(length(v.index)))){
 }
 
 end_time_mcmc <- Sys.time()
-print(c("Time taken to run three iterations of the MCMC algorithm:", difftime(end_time_mcmc,  start_time_mcmc, units = "secs")))
+print(c("Time taken to run",length(v.index)," iterations of the MCMC algorithm:", difftime(end_time_mcmc,  start_time_mcmc, units = "secs")))
+print("Finished:")
+print(Sys.time())
 
 
 #####################################################################################
@@ -227,6 +229,8 @@ run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
     sink(type = "message")
   }
   print(c("Time taken for inlabru to run the entire sensitivity analysis for all three examples:", difftime(end_time_inla,  start_time_inla, units = "secs"), "seconds"))
+  print("Finished:")
+  print(Sys.time())
   df <- list(coverage.tot, inla.lambda.error.tot, inla.lambda.bias.tot)
   return(df)
 }
