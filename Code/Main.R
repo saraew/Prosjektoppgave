@@ -25,43 +25,43 @@ if(Markov == TRUE){
   .libPaths("C:/Users/sara_/OneDrive/Documents/R/win-library/4.1")
 }
 
-#install.packages("devtools")
-#install.packages("ggplot2")
-#install.packages("nimble")
-#install.packages("coda")
-#install.packages("mgcv")
-#install.packages("dplyr")
-#install.packages("ngspatial")
-#install.packages("sp")
-#install.packages("spdep")
-#install.packages("maps")
-#install.packages("mapproj")
-#install.packages("matrixStats")
-#install.packages("RColorBrewer")
-#install.packages("sn")
-#install.packages("INLA", repos="https://inla.r-inla-download.org/R/testing")
-#install.packages("inlabru")
-#install.packages("installr")
+install.packages("devtools")
+install.packages("ggplot2")
+install.packages("nimble")
+install.packages("coda")
+install.packages("mgcv")
+install.packages("dplyr")
+install.packages("ngspatial")
+install.packages("sp")
+install.packages("spdep")
+install.packages("maps")
+install.packages("mapproj")
+install.packages("matrixStats")
+install.packages("RColorBrewer")
+install.packages("sn")
+install.packages("INLA", repos="https://inla.r-inla-download.org/R/testing")
+install.packages("inlabru")
+install.packages("installr")
 
 
 
 
-# library(devtools) 
-# library(ggplot2) # For reproducing plots seen in the paper.
-# library(nimble) # For MCMC computation using NIMBLE.
-# library(coda) # For manipulation of MCMC results.
-# library(mgcv)
-# library(dplyr)
-# library(ngspatial)
-# library(sp) # For plotting the micro-regions.
-# library(spdep) # For computing the neighbourhood and adjancency objects.
-# library(maps) # For adding a map to the plots of Brazil.
-# library(mapproj)
-# library(matrixStats)
-# library(RColorBrewer)
-# library(sn)
-# library(INLA)
-# library(inlabru)
+library(devtools)
+library(ggplot2) # For reproducing plots seen in the paper.
+library(nimble) # For MCMC computation using NIMBLE.
+library(coda) # For manipulation of MCMC results.
+library(mgcv)
+library(dplyr)
+library(ngspatial)
+library(sp) # For plotting the micro-regions.
+library(spdep) # For computing the neighbourhood and adjancency objects.
+library(maps) # For adding a map to the plots of Brazil.
+library(mapproj)
+library(matrixStats)
+library(RColorBrewer)
+library(sn)
+library(INLA)
+library(inlabru)
 
 
 # Model thinning. This model uses a lot of memory (20GB), so if this is not available to you, 
@@ -72,8 +72,7 @@ thin_multiplier <- 1
 
 #Checking if the computer runs the same version of R, INLA and inlabru as the original code was run on. 
 sessionInfo()
-#update.packages(ask = F)
-old.packages()
+
 
 # 
 # 
