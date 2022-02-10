@@ -110,7 +110,7 @@ run_inlabru <- function(means, sd, v.index){
                formula = formula,
                data= df)
     
-    bru_options_set(bru_verbose = TRUE, bru_max_iter = 15)
+    bru_options_set(bru_verbose = TRUE, bru_max_iter = 30)
     
     
     
