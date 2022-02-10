@@ -92,7 +92,6 @@ col.pal.red <- brewer.pal(9, "Spectral")[1]
 # All credit to the authors of "A Hierarchical Framework for Correcting Under-Reporting in Count Data"
 # for these functions, needed to run NIMBLE.
 source("Functions.R")
-
 print("Function.R has been executed")
 
 # Seed for NIMBLE and inlabru, 794637 is used for results in
@@ -120,7 +119,4 @@ print("Sim_coverage.R has been executed")
 source("Sim_experiments.R")
 print("Sim_experiments has been executed")
 
-# 
-# 
-# 
-# 
+
