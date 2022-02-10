@@ -46,22 +46,22 @@ if(Markov == TRUE){
 
 
 
-library(devtools) 
-library(ggplot2) # For reproducing plots seen in the paper.
-library(nimble) # For MCMC computation using NIMBLE.
-library(coda) # For manipulation of MCMC results.
-library(mgcv)
-library(dplyr)
-library(ngspatial)
-library(sp) # For plotting the micro-regions.
-library(spdep) # For computing the neighbourhood and adjancency objects.
-library(maps) # For adding a map to the plots of Brazil.
-library(mapproj)
-library(matrixStats)
-library(RColorBrewer)
-library(sn)
-library(INLA)
-library(inlabru)
+# library(devtools) 
+# library(ggplot2) # For reproducing plots seen in the paper.
+# library(nimble) # For MCMC computation using NIMBLE.
+# library(coda) # For manipulation of MCMC results.
+# library(mgcv)
+# library(dplyr)
+# library(ngspatial)
+# library(sp) # For plotting the micro-regions.
+# library(spdep) # For computing the neighbourhood and adjancency objects.
+# library(maps) # For adding a map to the plots of Brazil.
+# library(mapproj)
+# library(matrixStats)
+# library(RColorBrewer)
+# library(sn)
+# library(INLA)
+# library(inlabru)
 
 
 # Model thinning. This model uses a lot of memory (20GB), so if this is not available to you, 
