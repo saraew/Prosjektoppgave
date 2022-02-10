@@ -18,12 +18,12 @@
 
 
 # Needed if running on Markov
-Markov = TRUE
-if(Markov == TRUE){
-  .libPaths("~/Documents/Prosjektoppgave/R_packages")
-} else {
-  .libPaths("C:/Users/sara_/OneDrive/Documents/R/win-library/4.1")
-}
+# Markov = TRUE
+# if(Markov == TRUE){
+#   .libPaths("~/Documents/Prosjektoppgave/R_packages")
+# } else {
+#   .libPaths("C:/Users/sara_/OneDrive/Documents/R/win-library/4.1")
+# }
 
 #install.packages("devtools")
 #install.packages("ggplot2")
