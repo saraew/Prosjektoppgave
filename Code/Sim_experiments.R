@@ -70,6 +70,7 @@ print(c("Time taken to run three iterations of the MCMC algorithm:", difftime(en
 ##################################################
 # Setting up and running inlabru
 ##################################################
+set.seed(seed)
 
 run_inlabru <- function(means, sd, v.index){
   sim.inla.list <- list()
