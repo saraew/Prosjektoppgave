@@ -72,8 +72,8 @@ thin_multiplier <- 1
 
 #Checking if the computer runs the same version of R, INLA and inlabru as the original code was run on. 
 sessionInfo()
-update.packages(ask = F)
-
+#update.packages(ask = F)
+old.packages()
 
 # 
 # 
