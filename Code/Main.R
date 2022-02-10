@@ -42,8 +42,8 @@ if(Markov == TRUE){
 # install.packages("INLA", repos="https://inla.r-inla-download.org/R/testing")
 # install.packages("inlabru")
 # install.packages("installr")
-install.packages("Matrix")
-install.packages("nlme")
+#install.packages("Matrix")
+#install.packages("nlme")
 
 
 
