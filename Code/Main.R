@@ -105,8 +105,8 @@ print("Sim_data.R has been executed")
 # Running the sensistivity analysis and 
 # plotting the coverage using MCMC and inlabru, 
 # with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
-source("Sim_coverage.R")
-print("Sim_coverage.R has been executed")
+# source("Sim_coverage.R")
+# print("Sim_coverage.R has been executed")
 
 # Running the simulation experiment and plotting the results.
 # Using both inlabru and MCMC to run the experiments. 

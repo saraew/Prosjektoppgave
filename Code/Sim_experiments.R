@@ -4,6 +4,7 @@
 ##################################################
 
 
+set.seed(seed)
 prior.means=b0+rep(0.6,3) # The mean of the prior for beta_0.
 prior.sd=rep(0.6,3) # The standard deviation of the prior for beta_0.
 v.index= c(1,3,4) # The strength of the under-reporting covariate.
@@ -156,7 +157,7 @@ print("Running INLA (inlabru) for the three examples used in the specialisation 
 inlabru.results.sim <-run_inlabru(prior.means,prior.sd, v.index) 
 
 
-#Under here: generating plots for all three examples. 
+ #Under here: generating plots for all three examples. 
 
 ##################################################################################
 # Generating results and plots for v_{s,1}, correlation 1
