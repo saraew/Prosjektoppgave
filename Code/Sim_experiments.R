@@ -111,7 +111,7 @@ run_inlabru <- function(means, sd, v.index){
                formula = formula,
                data= df)
     
-    bru_options_set(bru_verbose = TRUE, bru_max_iter = 30)
+    bru_options_set(bru_verbose = TRUE, bru_max_iter = 30, control.inla = list(tolerance = 1e-10))
     
     
     
@@ -119,7 +119,7 @@ run_inlabru <- function(means, sd, v.index){
                lik,
                options = list(verbose = F,
                               num.threads = "1:1"))
-    
+    fit <- bru_rerun(fit)
     
     #Generate lambda
     sim$post_lambda <- generate(fit, data = df, formula =~ exp(Intercept + covariate + spatial), n.samples = 1000)
