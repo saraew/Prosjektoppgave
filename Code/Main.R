@@ -76,49 +76,50 @@ thin_multiplier <- 1
 sessionInfo()
 
 
-# 
-# 
-# # Setting up the color palette for plots
-# col.pal <- "PuBuGn"
-# #display.brewer.pal(name = col.pal, n = 9)
-# col.pal.violet <- brewer.pal(9, col.pal)[4]
-# col.pal.blue <- brewer.pal(9, col.pal)[6]
-# col.pal.seagreen <- brewer.pal(9, col.pal)[7]
-# col.pal.green <- brewer.pal(9, col.pal)[9]
-# col.pal.red <- brewer.pal(9, "Spectral")[1]
-# 
-# 
-# # Load in some functions. 
-# # All credit to the authors of "A Hierarchical Framework for Correcting Under-Reporting in Count Data" 
-# # for these functions, needed to run NIMBLE. 
-# source("Functions.R")
-# 
-# print("Function.R has been executed")
-# 
-# # Seed for NIMBLE and inlabru, 794637 is used for results in 
-# # "A Hierarchical Framework for Correcting Under-Reporting in Count Data" 
-# seed <- 794637 
-# 
-# # Load in the data.
-# load("Data.RData") 
-# print("Loading Data.RData has been executed")
-# 
-# 
-# #Creating the synthetic data
-# source("Sim_data.R")
-# print("Sim_data.R has been executed")
-# 
-# # Running the sensistivity analysis and 
-# # plotting the coverage using MCMC and inlabru, 
-# # with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
-# # source("Sim_coverage.R")
-# # print("Sim_coverage.R has been executed")
-# 
-# # Running the simulation experiment and plotting the results.
-# # Using both inlabru and MCMC to run the experiments. 
-# source("Sim_experiments.R")
-# print("Sim_experiments has been executed")
-# 
+
+
+# Setting up the color palette for plots
+col.pal <- "PuBuGn"
+#display.brewer.pal(name = col.pal, n = 9)
+col.pal.violet <- brewer.pal(9, col.pal)[4]
+col.pal.blue <- brewer.pal(9, col.pal)[6]
+col.pal.seagreen <- brewer.pal(9, col.pal)[7]
+col.pal.green <- brewer.pal(9, col.pal)[9]
+col.pal.red <- brewer.pal(9, "Spectral")[1]
+
+
+# Load in some functions.
+# All credit to the authors of "A Hierarchical Framework for Correcting Under-Reporting in Count Data"
+# for these functions, needed to run NIMBLE.
+source("Functions.R")
+
+print("Function.R has been executed")
+
+# Seed for NIMBLE and inlabru, 794637 is used for results in
+# "A Hierarchical Framework for Correcting Under-Reporting in Count Data"
+seed <- 794637
+
+# Load in the data.
+load("Data.RData")
+print("Loading Data.RData has been executed")
+
+
+#Creating the synthetic data
+source("Sim_data.R")
+print("Sim_data.R has been executed")
+
+# Running the sensistivity analysis and
+# plotting the coverage using MCMC and inlabru,
+# with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
+
+# source("Sim_coverage.R")
+# print("Sim_coverage.R has been executed")
+
+# Running the simulation experiment and plotting the results.
+# Using both inlabru and MCMC to run the experiments.
+source("Sim_experiments.R")
+print("Sim_experiments has been executed")
+
 # 
 # 
 # 
