@@ -168,7 +168,7 @@ run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
                formula = formula,
                data= df)
     
-    bru_options_set(bru_verbose = TRUE, bru_max_iter = 30)
+    bru_options_set(bru_verbose = TRUE, bru_max_iter = 30, control.inla = list(tolerance = 1e-10))
     
     
     
