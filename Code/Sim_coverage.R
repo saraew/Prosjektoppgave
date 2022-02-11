@@ -116,6 +116,10 @@ mcmc.data=data.frame(x=prior.means,y=prior.sd,z=v.index,cov=cor(sim$v)[v.index],
 ##################################################
 
 run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
+  print("If dump == TRUE, then all output from running inlabru here is dumped to file.")
+  print("Then, it will not show up when running R")
+  print(c("Here, dump ==", dump))
+  
   #Dump into file
   if(dump){
     sink(file = "inlabru_output.txt")
