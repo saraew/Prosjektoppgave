@@ -99,8 +99,8 @@ print("Function.R has been executed")
 seed <- 794637
 
 # Load in the data.
-load("Data.RData")
-print("Loading Data.RData has been executed")
+#load("Data.RData")
+#print("Loading Data.RData has been executed")
 
 
 #Creating the synthetic data
