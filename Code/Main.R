@@ -58,16 +58,12 @@ library(INLA)
 library(inlabru)
 
 
+
 # Model thinning. This model uses a lot of memory (20GB), so if this is not available to you, 
 # then consider thinning the model. Suggestion: thin_multiplier <- 10, reduces the memory usage to about 8GB. 
 # Consider reducing the number og chains and increase the thinning of the TB model to reduce the memory usage even more. 
 
 thin_multiplier <- 1 
-
-#Checking if the computer runs the same version of R, INLA and inlabru as the original code was run on. 
-sessionInfo()
-
-
 
 
 # Setting up the color palette for plots
