@@ -240,7 +240,11 @@ run.inlabru.coverage <- function(means, sd, v.index, dump = FALSE){
 }
 
 print("Running the sensitivity analysis using INLA (inlabru) for the three examples used in the specialisation project)")
-
+# Here, "dump" can be specified in the function call. If dump = TRUE, the all output from running inlabru will be 
+# dumped into a .txt file. 
+# The reason for this is so it is possible to check is inlabru has converged for all combinations of
+# prior means and prior sd. If convergence is not reached, we can not trust the returned results. 
+# Inlabru returns regardless of convergence or not, so that is something to be aware of. 
 inlabru.coverage.sim <-run.inlabru.coverage(prior.means,prior.sd, v.index, dump = TRUE)
 
 
