@@ -16,15 +16,6 @@
 # This relates both to the simulation study and the application on Tuberculosis data. 
 
 
-
-# Needed if running on Markov
-Markov = TRUE
-if(Markov == TRUE){
-  .libPaths("~/Documents/Prosjektoppgave/R_packages")
-} else {
-  .libPaths("C:/Users/sara_/OneDrive/Documents/R/win-library/4.1")
-}
-
 # install.packages("devtools")
 # install.packages("ggplot2")
 # install.packages("nimble")
@@ -44,6 +35,7 @@ if(Markov == TRUE){
 # install.packages("installr")
 #install.packages("Matrix")
 #install.packages("nlme")
+#install.packages(""foreach)
 
 
 
@@ -98,9 +90,6 @@ print("Function.R has been executed")
 # "A Hierarchical Framework for Correcting Under-Reporting in Count Data"
 seed <- 794637
 
-# Load in the data.
-#load("Data.RData")
-#print("Loading Data.RData has been executed")
 
 
 #Creating the synthetic data
@@ -119,4 +108,11 @@ print("Sim_coverage.R has been executed")
 source("Sim_experiments.R")
 print("Sim_experiments has been executed")
 
+############################################################
+# Application to real data
+############################################################
 
+
+# Load in the TB data.
+#load("Data.RData")
+#print("Loading Data.RData has been executed")
