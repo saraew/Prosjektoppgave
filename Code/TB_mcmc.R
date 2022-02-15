@@ -128,18 +128,16 @@ TB_mcmc<-buildMCMC(TB_mcmc_conf)
 TB_compiled_mcmc<-compileNimble(TB_mcmc, project = TB_model,resetFunctions = TRUE)
 
 # Run the model (hours).
-# TB_samples=runMCMC(TB_compiled_mcmc,inits=TB_inits,
-#                    nchains = 4, nburnin=400000,niter = 800000,samplesAsCodaMCMC = TRUE,thin=40,
-#                    summary = FALSE, WAIC = FALSE,setSeed=c(seed,2*seed,3*seed,4*seed))
+TB_samples=runMCMC(TB_compiled_mcmc,inits=TB_inits,
+                   nchains = 4, nburnin=400000,niter = 800000,samplesAsCodaMCMC = TRUE,thin=40,
+                   summary = FALSE, WAIC = FALSE,setSeed=c(seed,2*seed,3*seed,4*seed))
 
 # # Run the model just for testing.
 # TB_samples=runMCMC(TB_compiled_mcmc,inits=TB_inits,
 #                    nchains = 4, nburnin=40,niter = 80,samplesAsCodaMCMC = TRUE,thin=40,
 #                    summary = FALSE, WAIC = FALSE,setSeed=c(seed,2*seed,3*seed,4*seed))
 
-TB_samples=runMCMC(TB_compiled_mcmc,inits=TB_inits,
-                   nchains = 4, nburnin=400000,niter = 800000,samplesAsCodaMCMC = TRUE,thin=4000,
-                   summary = FALSE, WAIC = FALSE,setSeed=c(seed,2*seed,3*seed,4*seed))
+
 
 
 gelman <- gelman.diag(TB_samples[,c('a[1]','a[2]','a[3]','a[4]','a[5]','a[6]','a[7]','a[8]',
