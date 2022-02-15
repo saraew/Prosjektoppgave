@@ -87,23 +87,23 @@ print("Function.R has been executed")
 seed <- 794637
 
 
-
-#Creating the synthetic data
-source("Sim_data.R")
-print("Sim_data.R has been executed")
-
-# Running the sensistivity analysis and
-# plotting the coverage using MCMC and inlabru,
-# with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
-# Runtime: 2-4 hours 
-source("Sim_coverage.R")
-print("Sim_coverage.R has been executed")
-
-# Running the simulation experiment and plotting the results.
-# Using both inlabru and MCMC to run the experiments.
-# Runtime: 20-60 minutes. 
-source("Sim_experiments.R")
-print("Sim_experiments has been executed")
+# 
+# #Creating the synthetic data
+# source("Sim_data.R")
+# print("Sim_data.R has been executed")
+# 
+# # Running the sensistivity analysis and
+# # plotting the coverage using MCMC and inlabru,
+# # with correlation 1, 0.6 and 0.4 with the under-reporting covariate w_s
+# # Runtime: 2-4 hours 
+# source("Sim_coverage.R")
+# print("Sim_coverage.R has been executed")
+# 
+# # Running the simulation experiment and plotting the results.
+# # Using both inlabru and MCMC to run the experiments.
+# # Runtime: 20-60 minutes. 
+# source("Sim_experiments.R")
+# print("Sim_experiments has been executed")
 
 ############################################################
 # Application to real data
@@ -111,5 +111,8 @@ print("Sim_experiments has been executed")
 
 
 # Load in the TB data.
-#load("Data.RData")
-#print("Loading Data.RData has been executed")
+load("Data.RData")
+print("Loading Data.RData has been executed")
+
+source("TB_mcmc.R")
+print("TB_mcmc.R has been executed")
