@@ -10,4 +10,4 @@ To run the simulation experiment, the "Sim_data.R" generates the synthetic data.
 This synthetic data will the be used to run both the sensitivity analysis and the experiments presented in 
 my specialisation project at NTNU. 
 
-
+The PDF with the final report can also be found here, named Prosjektoppgave.pdf
